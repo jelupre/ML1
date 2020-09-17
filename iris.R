@@ -35,6 +35,6 @@ plot(iris[, 3:4], pch = 21, bg = colors[iris$Species], asp = 1)
 
 ## рисуем точки
 for (i in 1:15){
-  points(points[i, 1], points[i, 2], pch = 24, bg = colors[oneNN(train_set, points[i])], asp = 1)
+  points(points[i, 1], points[i, 2], pch = 24, bg = colors[oneNN(train_set, points[i, 1:2])], asp = 1)
 }
 
