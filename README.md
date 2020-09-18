@@ -15,11 +15,13 @@
   Рассмотрим задачу kNN при k = 1 на языке R, используя датасет "Ирисы Фишера". 
   Посмотрим на карту классификаций.
 </p>
+
 ![screenshot of sample](https://raw.githubusercontent.com/jelupre/ML1/master/iris_map.png)
 
 <p>
   Теперь выберем тренировочную выборку по ширине и длине лепестка и виду ириса. В нашей выборке 150 ирисов.
 </p>
+
 ![screenshot of sample](https://raw.githubusercontent.com/jelupre/ML1/master/iris_plot.png)
 
 <p>
