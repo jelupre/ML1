@@ -30,7 +30,25 @@
   В самой функции 1NN ищем ближайшего по Евклидову расстоянию соседа для текущей точки и возвращаем вид ириса для неё же. 
   На рисунке ниже показан результат пяти случайно выбранных точек.
 </p>
+```R
+oneNN <- function(set, point){
+  
+  ## возьмём за ближайшего соседа первую точку в наборе
+  min_distance <- distance_of_Euclid(set[1, 1:2], point)
+  number_of_nearest <- 1
+  
+  ## попробуем найти соседа ближе
+  for(i in 2:N){
+    if (distance_of_Euclid(set[i, 1:2], point) < min_distance){
+      min_distance <- distance_of_Euclid(set[i, 1:2], point)
+      number_of_nearest <- i
+    }
+  }
+  
+  ## возвращаем вид ириса ближайшего соседа
+  return(set[number_of_nearest, 3])
+  
+}
+```
 
 ![screenshot of sample](https://raw.githubusercontent.com/jelupre/ML1/master/iris_done.png)
-
-
