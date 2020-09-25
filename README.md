@@ -163,4 +163,19 @@ LOO <- function(arr){
     }
     
   }
+   
+  min_k <- 1
+  min_v <- Q[min_k]
+  
+  for (i in 1:(row - 1)) {
+    if (min_v > Q[i]) {
+      min_v <- Q[i]
+      min_k <- i
+    }
+  }
+  
+  
+  return(min_k)
+  
+}
 ```
