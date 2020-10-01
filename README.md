@@ -69,6 +69,10 @@ oneNN <- function(set, point){
 }
 ```
 
+Посмотрим на карту классификации для 1NN.
+
+![screenshot of sample](https://github.com/jelupre/ML1/blob/master/1nn_map.png)
+
 <h2>Метод k-ближайших соседей</h2>
 
 <h3>Алгоритм</h3>
@@ -159,4 +163,12 @@ LOO <- function(arr){
 }
 ```
 
+![screenshot of sample](https://github.com/jelupre/ML1/blob/master/LOO_6nn.png) ![screenshot of sample](https://github.com/jelupre/ML1/blob/master/LOO_6nn_near.png)
+
+Для данной выборки LOO возвращает k, равный 6. Теперь запустим 6NN для 10 случаной выбранных точек.
+
 ![screenshot of sample](https://github.com/jelupre/ML1/blob/master/6nn_10points.png)
+
+Посмотрим на карту классификации для 6NN.
+
+![screenshot of sample](https://github.com/jelupre/ML1/blob/master/6nn_map.png)
