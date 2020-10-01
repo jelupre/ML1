@@ -178,3 +178,5 @@ LOO <- function(arr){
   
 }
 ```
+
+![screenshot of sample](https://github.com/jelupre/ML1/blob/master/6nn_10points.png)
