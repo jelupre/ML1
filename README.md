@@ -122,41 +122,52 @@ LOO <- function(arr){
     new_arr <- new_arr[-i, ]
     ordered_arr <- sort(new_arr, point)
     
-    tmp <- 0
-    
-    if (arr[i, 3] == "setosa") {
-      tmp <- 1
-    }
-    if (arr[i, 3] == "versicolor") {
-      tmp <- 2
-    }
-    if (arr[i, 3] == "virginica") {
-      tmp <- 3
-    }
-    
-    
     for (k in 1:(row - 1)) {
       
-      class <- kNN(k, ordered_arr, point)
+      class <- kNN(k, ordered_arr)
       
-      if (class != tmp) {
+      if (class != arr[i, 3]) {
         Q[k] <- Q[k] + 1
       }
       
     }
     
   }
-   
-  min_k <- 1
+  
+  min_k <- which.min(Q[1:(row - 1)])
   min_v <- Q[min_k]
   
+  
+  I <- matrix(1:(row - 1), (row - 1), 1)
+  
   for (i in 1:(row - 1)) {
-    if (min_v > Q[i]) {
-      min_v <- Q[i]
-      min_k <- i
-    }
+    Q[i] <- Q[i]/(row - 1)
   }
   
+  ## график LOO и k
+  plot(
+    I[1:(row - 1)], 
+    Q[1:(row - 1)], 
+    type = "l", xlab = "k", ylab = "LOO",
+    main = "LOO(k)"
+  )
+  points(min_k, min_v/(row - 1), pch = 21, bg = "black")
+  
+  
+  range <- 5
+  while (min_k - range < 0 || min_k + range > 149) {
+    range <- range - 1
+  }
+  ## график LOO и k увеличенный масштаб
+  plot(
+    I[(min_k - range):(min_k + range)], 
+    Q[(min_k - range):(min_k + range)], 
+    xlim = c((min_k - range), (min_k + range)), 
+    ylim = c(min_v/(row - 1) - 0.1, min_v/(row - 1) + 0.1), 
+    type = "l", xlab = "k", ylab = "LOO",
+    main = "LOO(k) (Окрестность точки)"
+  )
+  points(min_k, min_v/(row - 1), pch = 21, bg = "black")
   
   return(min_k)
   
