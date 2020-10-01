@@ -89,33 +89,13 @@ oneNN <- function(set, point){
 ## сортировка тренировочного набора
 ordered_set <- sort(train_set, points[i, 1:2])
 ## функция kNN
-kNN <- function(k, ordered_arr, point){
+kNN <- function(k, ordered_arr){
   
-  ind1 <- 0;
-  ind2 <- 0;
-  ind3 <- 0;
+  col_class <- dim(ordered_arr)[2]
   
-  for (i in 1:k) {
-    if (ordered_arr[i, 3] == 'setosa') {
-      ind1 <- ind1 + 1
-    }
-    if (ordered_arr[i, 3] == 'versicolor') {
-      ind2 <- ind2 + 1
-    }
-    if (ordered_arr[i, 3] == 'virginica') {
-      ind3 <- ind3 + 1
-    }
-  }
+  class <- names(which.max(table(ordered_arr[1:k, col_class])))
   
-  if (ind1 >= ind2 && ind1 >= ind3) {
-    return(1)
-  }
-  if (ind2 >= ind1 && ind2 >= ind3) {
-    return(2)
-  }
-  if (ind3 >= ind1 && ind3 >= ind2) {
-    return(3)
-  }
+  return(class)
   
 }
 ```
