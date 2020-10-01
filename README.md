@@ -184,5 +184,5 @@ LOO <- function(arr){
 
 ![screenshot of sample](https://github.com/jelupre/ML1/blob/master/6nn_map.png)
 
-<h2>Метод k взвешенных ближайших соседей</h2>
+<h2>Метод k-ближайших взвешенных соседей</h2>
 
