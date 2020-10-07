@@ -274,8 +274,8 @@ LOO_q <- function(arr, k) {
 
 ![screenshot of sample](https://github.com/jelupre/ML1/blob/master/6wnn_10points.png)
 
-![screenshot of sample](https://github.com/jelupre/ML1/blob/master/LOO_6nn.png)
+![screenshot of sample](https://github.com/jelupre/ML1/blob/master/LOO_6wNN.png)
 
-![screenshot of sample](https://github.com/jelupre/ML1/blob/master/LOO_6nn_near.png)
+![screenshot of sample](https://github.com/jelupre/ML1/blob/master/LOO_6wNN_near.png)
 
 
