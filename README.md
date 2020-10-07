@@ -186,25 +186,7 @@ LOO <- function(arr){
 
 <h2>Метод k-ближайших взвешенных соседей</h2>
 
-
-```R
-kwNN <- function(k, ordered_arr, weights){
-  
-  order_and_weight <- cbind(ordered_arr, weights)
-  classes <- order_and_weight[1:k, 3:4]
-  
-  w1 <- sum(classes[classes$Species == "setosa", 2])
-  w2 <- sum(classes[classes$Species == "versicolor", 2])
-  w3 <- sum(classes[classes$Species == "virginica", 2])
-  
-  answer <- matrix(c(w1, w2, w3), nrow = 1, ncol = 3, byrow = TRUE, list(c(1), c(1, 2, 3)))
-  
-  class <- c("setosa", "versicolor", "virginica")
-  
-  return(class[which.max(answer)])
-  
-}
-```
+Метод kwNN отличается от kNN тем, что в первом добавляется вес к каждой точке в выборке, потом этот вес суммируется относительно классов, по итогу, вес какого класса будет больше, к тому классу и будет отнесена классифицируемая точка. Будем использовать весовую функцию q^i, где q = (0, 1), i = \[1, k\]. Возьмём k = 6 и для него найдём оптимальный q с точностью 0.01.
 
 ```R
 LOO_q <- function(arr, k) {
@@ -270,12 +252,34 @@ LOO_q <- function(arr, k) {
 }
 ```
 
-![screenshot of sample](https://github.com/jelupre/ML1/blob/master/6wNN_map.png)
-
-![screenshot of sample](https://github.com/jelupre/ML1/blob/master/6wnn_10points.png)
-
 ![screenshot of sample](https://github.com/jelupre/ML1/blob/master/LOO_6wNN.png)
 
 ![screenshot of sample](https://github.com/jelupre/ML1/blob/master/LOO_6wNN_near.png)
 
+Сам алгоритм kwNN выглядит следующим образом:
+
+```R
+kwNN <- function(k, ordered_arr, weights){
+  
+  order_and_weight <- cbind(ordered_arr, weights)
+  classes <- order_and_weight[1:k, 3:4]
+  
+  w1 <- sum(classes[classes$Species == "setosa", 2])
+  w2 <- sum(classes[classes$Species == "versicolor", 2])
+  w3 <- sum(classes[classes$Species == "virginica", 2])
+  
+  answer <- matrix(c(w1, w2, w3), nrow = 1, ncol = 3, byrow = TRUE, list(c(1), c(1, 2, 3)))
+  
+  class <- c("setosa", "versicolor", "virginica")
+  
+  return(class[which.max(answer)])
+  
+}
+```
+
+Отобразим 10 случайно выбранных точек с помощью алгоритма kwNN, при k = 6, а q = 0.56.
+
+![screenshot of sample](https://github.com/jelupre/ML1/blob/master/6wnn_10points.png)
+
+Теперь посмотрим на карту классификации.
 
