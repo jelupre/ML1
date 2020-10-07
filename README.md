@@ -270,5 +270,12 @@ LOO_q <- function(arr, k) {
 }
 ```
 
+![screenshot of sample](https://github.com/jelupre/ML1/blob/master/6wNN_map.png)
+
+![screenshot of sample](https://github.com/jelupre/ML1/blob/master/6wNN_10points.png)
+
+![screenshot of sample](https://github.com/jelupre/ML1/blob/master/LOO_6nn.png)
+
+![screenshot of sample](https://github.com/jelupre/ML1/blob/master/LOO_6nn_near.png)
 
 
