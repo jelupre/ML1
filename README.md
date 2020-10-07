@@ -206,5 +206,69 @@ kwNN <- function(k, ordered_arr, weights){
 }
 ```
 
+```R
+LOO_q <- function(arr, k) {
+  
+  row <- dim(arr)[1]
+  
+  Q <- matrix(0, 99, 1)
+  
+  for (i in 1:row) {
+    
+    point <- arr[i, 1:2]
+    new_arr <- arr
+    new_arr <- new_arr[-i, ]
+    ordered_arr <- sort(new_arr, point)
+    
+    weights <- matrix(0, (row - 1), 1)
+    
+    for (q in 1:99) {
+      
+      for (p in 1:(row - 1)) {
+        weights[p] <- (q / 100)^p
+      }
+      
+      class <- kwNN(k, ordered_arr, weights)
+      
+      if (class != arr[i, 3]) {
+        Q[q] <- Q[q] + 1
+      }
+      
+    }
+    
+  }
+  
+  min_q <- which.min(Q[1:99])
+  min_v <- min(Q[1:99])
+  
+  I <- matrix(seq(0.01, 0.99, 0.01), 99, 1)
+  
+  for (i in 1:99) {
+    Q[i] <- Q[i]/100
+  }
+  
+  ## график LOO и q при k = 6
+  plot(
+    I[1:99], 
+    Q[1:99], 
+    type = "l", xlab = "q", ylab = "LOO",
+    main = "LOO(q) при k = 6"
+  )
+  points(min_q/100, min_v/100, pch = 21, bg = "black")
+  
+  ## график LOO и q при k = 6 увеличенный масштаб
+  plot(
+    I[50:59], 
+    Q[50:59], 
+    type = "l", xlab = "q", ylab = "LOO",
+    main = "LOO(q) при k = 6 (Окрестность точки)"
+  )
+  points(min_q/100, min_v/100, pch = 21, bg = "black")
+  
+  return(min_q/100)
+  
+}
+```
+
 
 
