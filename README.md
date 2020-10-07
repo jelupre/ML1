@@ -186,3 +186,25 @@ LOO <- function(arr){
 
 <h2>Метод k-ближайших взвешенных соседей</h2>
 
+
+```R
+kwNN <- function(k, ordered_arr, weights){
+  
+  order_and_weight <- cbind(ordered_arr, weights)
+  classes <- order_and_weight[1:k, 3:4]
+  
+  w1 <- sum(classes[classes$Species == "setosa", 2])
+  w2 <- sum(classes[classes$Species == "versicolor", 2])
+  w3 <- sum(classes[classes$Species == "virginica", 2])
+  
+  answer <- matrix(c(w1, w2, w3), nrow = 1, ncol = 3, byrow = TRUE, list(c(1), c(1, 2, 3)))
+  
+  class <- c("setosa", "versicolor", "virginica")
+  
+  return(class[which.max(answer)])
+  
+}
+```
+
+
+
