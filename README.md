@@ -287,9 +287,9 @@ kwNN <- function(k, ordered_arr, weights){
 
 <table>
   <th>
-    <td>Метод</td>
-    <td>Параметры</td>
-    <td>Точность</td>    
+    Метод
+    Параметры
+    Точность   
   </th>
   <tr>
     <td>1nn</td>
