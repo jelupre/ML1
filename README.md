@@ -286,11 +286,11 @@ kwNN <- function(k, ordered_arr, weights){
 ![screenshot of sample](https://github.com/jelupre/ML1/blob/master/6wNN_map.png)
 
 <table>
-  <th>
-    Метод
-    Параметры
-    Точность   
-  </th>
+  <tr>
+    <th>Метод</th>
+    <th>Параметры</th>
+    <th>Точность</th>
+  </tr>
   <tr>
     <td>1nn</td>
     <td></td>
@@ -298,7 +298,7 @@ kwNN <- function(k, ordered_arr, weights){
   </tr>
   <tr>
     <td>knn</td>
-    <td>k = 6/<td>
+    <td>k = 6</td>
     <td>0.0333</td>
   </tr>
   <tr>
