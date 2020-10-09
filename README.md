@@ -285,3 +285,26 @@ kwNN <- function(k, ordered_arr, weights){
 
 ![screenshot of sample](https://github.com/jelupre/ML1/blob/master/6wNN_map.png)
 
+<table>
+  <th>
+    Метод
+    Параметры
+    Точность    
+  </th>
+  <tr>
+    1nn
+    
+    
+  </tr>
+  <tr>
+    knn
+    k = 6
+    0.0333
+  </tr>
+  <tr>
+    kwnn
+    k = 6, q = 0.56
+    
+  </tr>
+</table> 
+
