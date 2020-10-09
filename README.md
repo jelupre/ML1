@@ -287,24 +287,24 @@ kwNN <- function(k, ordered_arr, weights){
 
 <table>
   <th>
-    Метод
-    Параметры
-    Точность    
+    <td>Метод</td>
+    <td>Параметры</td>
+    <td>Точность</td>    
   </th>
   <tr>
-    1nn
-    
-    
+    <td>1nn</td>
+    <td></td>
+    <td></td>
   </tr>
   <tr>
-    knn
-    k = 6
-    0.0333
+    <td>knn</td>
+    <td>k = 6/<td>
+    <td>0.0333</td>
   </tr>
   <tr>
-    kwnn
-    k = 6, q = 0.56
-    
+    <td>kwnn</td>
+    <td>k = 6, q = 0.56</td>
+    <td></td>
   </tr>
 </table> 
 
