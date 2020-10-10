@@ -25,7 +25,7 @@
   Все метрические алгоритмы классификации будем рассматривать на датасете "Ирисы Фишера", а конкретнее - тренировочная выборка по ширине и длине лепестка и виду ириса. В выборке будет 150 цветков. Вот так, собственно, выглядит наш обучающий набор.
 </p>
 
-![screenshot of sample](https://github.com/jelupre/ML1/blob/master/irises.png)
+![set_of_irises](https://github.com/jelupre/ML1/blob/master/images/irises.png)
 
 <p>
   kNN расшифровывается как k Nearest Neighbor или k Ближайших Соседей — это один из самых простых алгоритмов классификации, также иногда используемый в задачах       
@@ -60,7 +60,7 @@
   На рисунке ниже показан результат 10 случайно выбранных точек.
 </p>
 
-![screenshot of sample](https://github.com/jelupre/ML1/blob/master/1nn_10points.png)
+![1nn_10points](https://github.com/jelupre/ML1/blob/master/images/1nn_10points.png)
 
 <p>
   Рассмотрим программную реализацию функции 1NN на языке программирования R.  
@@ -90,7 +90,7 @@ oneNN <- function(set, point){
 
 Посмотрим на карту классификации для 1NN.
 
-![screenshot of sample](https://github.com/jelupre/ML1/blob/master/1nn_map.png)
+![1nn_map](https://github.com/jelupre/ML1/blob/master/images/1nn_map.png)
 
 <h2>Метод k-ближайших соседей</h2>
 
@@ -193,15 +193,17 @@ LOO <- function(arr){
 }
 ```
 
-![screenshot of sample](https://github.com/jelupre/ML1/blob/master/LOO_6nn.png) ![screenshot of sample](https://github.com/jelupre/ML1/blob/master/LOO_6nn_near.png)
+![LOO_6nn](https://github.com/jelupre/ML1/blob/master/images/LOO_6nn.png) 
+
+![LOO_6nn_near](https://github.com/jelupre/ML1/blob/master/images/LOO_6nn_near.png)
 
 Для данной выборки LOO возвращает k, равный 6. Теперь запустим 6NN для 10 случаной выбранных точек.
 
-![screenshot of sample](https://github.com/jelupre/ML1/blob/master/6nn_10points.png)
+![6nn_10points](https://github.com/jelupre/ML1/blob/master/images/6nn_10points.png)
 
 Посмотрим на карту классификации для 6NN.
 
-![screenshot of sample](https://github.com/jelupre/ML1/blob/master/6nn_map.png)
+![6nn_map](https://github.com/jelupre/ML1/blob/master/images/6nn_map.png)
 
 <h2>Метод k-ближайших взвешенных соседей</h2>
 
@@ -271,9 +273,9 @@ LOO_q <- function(arr, k) {
 }
 ```
 
-![screenshot of sample](https://github.com/jelupre/ML1/blob/master/LOO_6wNN.png)
+![LOO_6wNN](https://github.com/jelupre/ML1/blob/master/images/LOO_6wnn.png)
 
-![screenshot of sample](https://github.com/jelupre/ML1/blob/master/LOO_6wNN_near.png)
+![LOO_6wNN_near](https://github.com/jelupre/ML1/blob/master/images/LOO_6wnn_near.png)
 
 Сам алгоритм kwNN выглядит следующим образом:
 
@@ -298,11 +300,11 @@ kwNN <- function(k, ordered_arr, weights){
 
 Отобразим 10 случайно выбранных точек с помощью алгоритма kwNN, при k = 6, а q = 0.56.
 
-![screenshot of sample](https://github.com/jelupre/ML1/blob/master/6wnn_10points.png)
+![6wnn_10points](https://github.com/jelupre/ML1/blob/master/images/6wnn_10points.png)
 
 Теперь посмотрим на карту классификации.
 
-![screenshot of sample](https://github.com/jelupre/ML1/blob/master/6wNN_map.png)
+![6wnn_map](https://github.com/jelupre/ML1/blob/master/images/6wnn_map.png)
 
 <h2>Преимущества kwNN</h2>
 Недостаток kNN в том, что максимум может достигаться сразу на нескольких классах. В задачах с двумя классами этого можно избежать, если взять нечётное k. Более общая тактика, которая годится и для случая многих классов — ввести строго убывающую последовательность вещественных весов , задающих вклад i-го соседа в классификацию.
