@@ -10,6 +10,11 @@
     <th>Точность</th>
   </tr>
   <tr>
+    <td>1nn</td>
+    <td>k = 1</td>
+    <td>0.04667</td>
+  </tr>
+  <tr>
     <td>knn</td>
     <td>k = 6</td>
     <td>0.0333</td>
