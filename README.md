@@ -352,7 +352,8 @@ kwNN <- function(k, ordered_arr, weights){
 
 ![Formula_Gauss](https://github.com/jelupre/ML1/blob/master/images/Formula_Gauss.png)
 
-где ![Formula_r](https://github.com/jelupre/ML1/blob/master/images/Formula_r.png)
+где 
+![Formula_r](https://github.com/jelupre/ML1/blob/master/images/Formula_r.png)
 
 ```R
 PW <- function(set, point, h) {
