@@ -405,20 +405,20 @@ LOO_h <- function(arr) {
 }
 ```
 
-![PW_P_map](https://github.com/jelupre/ML1/blob/master/images/PW_P_map.png
-![LOO_Rect](https://github.com/jelupre/ML1/blob/master/images/LOO_Rect.png
+![PW_P_map](https://github.com/jelupre/ML1/blob/master/images/PW_P_map.png)
+![LOO_Rect](https://github.com/jelupre/ML1/blob/master/images/LOO_Rect.png)
 
-![PW_Tr_map](https://github.com/jelupre/ML1/blob/master/images/PW_Tr_map.png
-![LOO_Triangle](https://github.com/jelupre/ML1/blob/master/images/LOO_Triangle.png
+![PW_Tr_map](https://github.com/jelupre/ML1/blob/master/images/PW_Tr_map.png)
+![LOO_Triangle](https://github.com/jelupre/ML1/blob/master/images/LOO_Triangle.png)
 
-![PW_E_map](https://github.com/jelupre/ML1/blob/master/images/PW_E_map.png
-![LOO_Epanech](https://github.com/jelupre/ML1/blob/master/images/LOO_Epanech.png
+![PW_E_map](https://github.com/jelupre/ML1/blob/master/images/PW_E_map.png)
+![LOO_Epanech](https://github.com/jelupre/ML1/blob/master/images/LOO_Epanech.png)
 
-![PW_Q_map](https://github.com/jelupre/ML1/blob/master/images/PW_Q_map.png
-![LOO_Quadratic](https://github.com/jelupre/ML1/blob/master/images/LOO_Quadratic.png
+![PW_Q_map](https://github.com/jelupre/ML1/blob/master/images/PW_Q_map.png)
+![LOO_Quadratic](https://github.com/jelupre/ML1/blob/master/images/LOO_Quadratic.png)
 
-![PW_G_map](https://github.com/jelupre/ML1/blob/master/images/PW_G_map.png
-![LOO_Gauss](https://github.com/jelupre/ML1/blob/master/images/LOO_Gauss.png
+![PW_G_map](https://github.com/jelupre/ML1/blob/master/images/PW_G_map.png)
+![LOO_Gauss](https://github.com/jelupre/ML1/blob/master/images/LOO_Gauss.png)
 
 
 
