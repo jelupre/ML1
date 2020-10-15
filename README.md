@@ -330,33 +330,11 @@ kwNN <- function(k, ordered_arr, weights){
 
 <h2>Метод парзеновского окна</h2>
 
-<table>
-  <tr>
-    <th>Название ядра</th>
-    <th>Формула</th>
-  </tr>
-  <tr>
-    <td>Епанечникова</td>
-    <td>![Formula_Epanech](https://github.com/jelupre/ML1/blob/master/images/Formula_Epanech.png)</td>
-  </tr>
-  <tr>
-    <td>Квартическое</td>
-    <td>![Formula_Quadratic](https://github.com/jelupre/ML1/blob/master/images/Formula_Quadratic.png)</td>
-  </tr>
-  <tr>
-    <td>Треугольное</td>
-    <td>![Formula_Triangle](https://github.com/jelupre/ML1/blob/master/images/Formula_Triangle.png)</td>
-  </tr>
-  <tr>
-    <td>Прямоугольное</td>
-    <td>![Formula_Rect](https://github.com/jelupre/ML1/blob/master/images/Formula_Rect.png)</td>
-  </tr>
-  <tr>
-    <td>Гауссовское</td>
-    <td>![Formula_Gauss](https://github.com/jelupre/ML1/blob/master/images/Formula_Gauss.png)</td>
-  </tr>
-</table> 
-
+Епанечникова - ![Formula_Epanech](https://github.com/jelupre/ML1/blob/master/images/Formula_Epanech.png)
+Квартическое - ![Formula_Quadratic](https://github.com/jelupre/ML1/blob/master/images/Formula_Quadratic.png)
+Треугольное - ![Formula_Triangle](https://github.com/jelupre/ML1/blob/master/images/Formula_Triangle.png)
+Прямоугольное - ![Formula_Rect](https://github.com/jelupre/ML1/blob/master/images/Formula_Rect.png)
+Гауссовское - ![Formula_Gauss](https://github.com/jelupre/ML1/blob/master/images/Formula_Gauss.png)
 
 ```R
 PW <- function(set, point, h) {
