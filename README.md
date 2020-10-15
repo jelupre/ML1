@@ -443,7 +443,7 @@ LOO_h <- function(arr) {
 ![LOO_Epanech](https://github.com/jelupre/ML1/blob/master/images/LOO_Epanech.png)
 
 ![PW_Q_map](https://github.com/jelupre/ML1/blob/master/images/PW_Q_map.png)
-![LOO_Qudratic](https://github.com/jelupre/ML1/blob/master/images/LOO_Qudratic.png)
+![LOO_Quadratic](https://github.com/jelupre/ML1/blob/master/images/LOO_Quadratic.png)
 
 ![PW_G_map](https://github.com/jelupre/ML1/blob/master/images/PW_G_map.png)
 ![LOO_Gauss](https://github.com/jelupre/ML1/blob/master/images/LOO_Gauss.png)
