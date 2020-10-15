@@ -355,6 +355,8 @@ kwNN <- function(k, ordered_arr, weights){
 где
 ![Formula_r](https://github.com/jelupre/ML1/blob/master/images/Formula_r.png)
 
+Рассмотрим программную реализацию:
+
 ```R
 PW <- function(set, point, h) {
   
@@ -381,6 +383,7 @@ PW <- function(set, point, h) {
 }
 ```
 
+Функция ядра:
 
 ```R
 K <- function(x, y, h) {
@@ -392,9 +395,12 @@ K <- function(x, y, h) {
   P <- 1/2
   Tr <- 1 - abs(r)
   
+  #возращаем гауссовское ядро 
   return(G)
 }
 ```
+
+Так же, как и в прошлых алгоритмах, нам необходимо определить оптимальный h. Воспользуемся LOO.
 
 ```R
 LOO_h <- function(arr) {
@@ -429,6 +435,8 @@ LOO_h <- function(arr) {
   
 }
 ```
+
+Теперь посмотрим на карты классификаций и график LOO(h) для всех пяти ядер.
 
 ![PW_R_map](https://github.com/jelupre/ML1/blob/master/images/PW_R_map.png)
 ![LOO_Rect](https://github.com/jelupre/ML1/blob/master/images/LOO_Rect.png)
