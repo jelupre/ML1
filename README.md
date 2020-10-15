@@ -328,7 +328,7 @@ kwNN <- function(k, ordered_arr, weights){
 
 ![kwnn_second_error](https://github.com/jelupre/ML1/blob/master/images/kwnn_second_error.png)
 
-
+<h2>Метод парзеновского окна</h2>
 
 ```R
 PW <- function(set, point, h) {
