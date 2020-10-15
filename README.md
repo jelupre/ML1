@@ -330,15 +330,20 @@ kwNN <- function(k, ordered_arr, weights){
 
 <h2>Метод парзеновского окна</h2>
 
-Прямоугольное ядро - ![Formula_Rect](https://github.com/jelupre/ML1/blob/master/images/Formula_Rect.png)
+Прямоугольное ядро
+![Formula_Rect](https://github.com/jelupre/ML1/blob/master/images/Formula_Rect.png)
 
-Треугольное ядро - ![Formula_Triangle](https://github.com/jelupre/ML1/blob/master/images/Formula_Triangle.png)
+Треугольное ядро
+![Formula_Triangle](https://github.com/jelupre/ML1/blob/master/images/Formula_Triangle.png)
 
-Ядро Епанечникова - ![Formula_Epanech](https://github.com/jelupre/ML1/blob/master/images/Formula_Epanech.png)
+Ядро Епанечникова
+![Formula_Epanech](https://github.com/jelupre/ML1/blob/master/images/Formula_Epanech.png)
 
-Квартическое ядро - ![Formula_Quadratic](https://github.com/jelupre/ML1/blob/master/images/Formula_Quadratic.png)
+Квартическое ядро
+![Formula_Quadratic](https://github.com/jelupre/ML1/blob/master/images/Formula_Quadratic.png)
 
-Гауссовское ядро - ![Formula_Gauss](https://github.com/jelupre/ML1/blob/master/images/Formula_Gauss.png)
+Гауссовское ядро
+![Formula_Gauss](https://github.com/jelupre/ML1/blob/master/images/Formula_Gauss.png)
 
 ```R
 PW <- function(set, point, h) {
