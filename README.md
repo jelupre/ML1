@@ -24,6 +24,31 @@
     <td>k = 6, q = 0.56</td>
     <td>0.04</td>
   </tr>
+  <tr>
+    <td>kwnn</td>
+    <td>k = 6, q = 0.56</td>
+    <td>0.04</td>
+  </tr>
+  <tr>
+    <td>kwnn</td>
+    <td>k = 6, q = 0.56</td>
+    <td>0.04</td>
+  </tr>
+  <tr>
+    <td>kwnn</td>
+    <td>k = 6, q = 0.56</td>
+    <td>0.04</td>
+  </tr>
+  <tr>
+    <td>kwnn</td>
+    <td>k = 6, q = 0.56</td>
+    <td>0.04</td>
+  </tr>
+  <tr>
+    <td>kwnn</td>
+    <td>k = 6, q = 0.56</td>
+    <td>0.04</td>
+  </tr>
 </table> 
 
 <p>
