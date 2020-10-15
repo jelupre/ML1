@@ -405,10 +405,10 @@ LOO_h <- function(arr) {
 }
 ```
 
-![PW_P_map](https://github.com/jelupre/ML1/blob/master/images/PW_P_map.png)
+![PW_R_map](https://github.com/jelupre/ML1/blob/master/images/PW_R_map.png)
 ![LOO_Rect](https://github.com/jelupre/ML1/blob/master/images/LOO_Rect.png)
 
-![PW_Tr_map](https://github.com/jelupre/ML1/blob/master/images/PW_Tr_map.png)
+![PW_T_map](https://github.com/jelupre/ML1/blob/master/images/PW_T_map.png)
 ![LOO_Triangle](https://github.com/jelupre/ML1/blob/master/images/LOO_Triangle.png)
 
 ![PW_E_map](https://github.com/jelupre/ML1/blob/master/images/PW_E_map.png)
