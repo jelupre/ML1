@@ -337,23 +337,23 @@ kwNN <- function(k, ordered_arr, weights){
   </tr>
   <tr>
     <td>Епанечникова</td>
-    <td>![Formula_Epanech](https://github.com/jelupre/ML1/blob/master/images/Formula_Epanech.gif)</td>
+    <td>![Formula_Epanech](https://github.com/jelupre/ML1/blob/master/images/Formula_Epanech.png)</td>
   </tr>
   <tr>
     <td>Квартическое</td>
-    <td>![Formula_Quadratic](https://github.com/jelupre/ML1/blob/master/images/Formula_Quadratic.gif)</td>
+    <td>![Formula_Quadratic](https://github.com/jelupre/ML1/blob/master/images/Formula_Quadratic.png)</td>
   </tr>
   <tr>
     <td>Треугольное</td>
-    <td>![Formula_Triangle](https://github.com/jelupre/ML1/blob/master/images/Formula_Triangle.gif)</td>
+    <td>![Formula_Triangle](https://github.com/jelupre/ML1/blob/master/images/Formula_Triangle.png)</td>
   </tr>
   <tr>
     <td>Прямоугольное</td>
-    <td>![Formula_Rect](https://github.com/jelupre/ML1/blob/master/images/Formula_Rect.gif)</td>
+    <td>![Formula_Rect](https://github.com/jelupre/ML1/blob/master/images/Formula_Rect.png)</td>
   </tr>
   <tr>
     <td>Гауссовское</td>
-    <td>![Formula_Gauss](https://github.com/jelupre/ML1/blob/master/images/Formula_Gauss.gif)</td>
+    <td>![Formula_Gauss](https://github.com/jelupre/ML1/blob/master/images/Formula_Gauss.png)</td>
   </tr>
 </table> 
 
