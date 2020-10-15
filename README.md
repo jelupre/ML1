@@ -327,3 +327,100 @@ kwNN <- function(k, ordered_arr, weights){
 Однако kwNN учитывает близость точек отностельно классифицируемой, поэтому такой ошибки он не допускает.
 
 ![kwnn_second_error](https://github.com/jelupre/ML1/blob/master/images/kwnn_second_error.png)
+
+
+
+```R
+PW <- function(set, point, h) {
+  
+  weights <- matrix(0, 1, 3)
+  row <- dim(set)[1]
+  class <- c("setosa", "versicolor", "virginica")
+  
+  for (i in 1:row) {
+    ##if (distance_of_Euclid(set[i, 1:2], point) <= h) {
+      tmp <- K(set[i, 1:2], point, h)
+      if (set[i, 3] == "setosa")      weights[1] <- weights[1] + tmp  
+      if (set[i, 3] == "versicolor")  weights[2] <- weights[2] + tmp
+      if (set[i, 3] == "virginica")   weights[3] <- weights[3] + tmp
+    ##}
+  }
+  
+  if (weights[1] + weights[2] + weights[3] == 0) {
+    return("white")
+  }
+  else {
+    return(class[which.max(weights)])
+  }
+
+}
+```
+
+
+```R
+K <- function(x, y, h) {
+  
+  r <- distance_of_Euclid(x, y)/h
+  E <- 3 * (1 - r^2) / 4
+  Q <- 15 * (1 - r^2) / 16
+  G <- ((2 * pi) ^ (-1 / 2)) * exp(-(r ^ 2) / 2)
+  P <- 1/2
+  Tr <- 1 - abs(r)
+  
+  return(G)
+}
+```
+
+```R
+LOO_h <- function(arr) {
+  
+  row <- dim(arr)[1]
+  
+  Q <- matrix(0, 20, 1)
+  
+  for (i in 1:row) {
+    
+    point <- arr[i, 1:2]
+    new_arr <- arr
+    new_arr <- new_arr[-i, ]
+    
+    for (h in 1:20) {
+      
+      class <- PW(new_arr, point, h/10)
+      
+      if (class != arr[i, 3]) {
+        
+        Q[h] <- Q[h] + 1
+        
+      }
+      
+    }
+    
+  }
+  
+  print(Q)
+  
+  return(which.min(Q)/10)
+  
+}
+```
+
+![PW_P_map](https://github.com/jelupre/ML1/blob/master/images/PW_P_map.png
+![LOO_Rect](https://github.com/jelupre/ML1/blob/master/images/LOO_Rect.png
+
+![PW_Tr_map](https://github.com/jelupre/ML1/blob/master/images/PW_Tr_map.png
+![LOO_Triangle](https://github.com/jelupre/ML1/blob/master/images/LOO_Triangle.png
+
+![PW_E_map](https://github.com/jelupre/ML1/blob/master/images/PW_E_map.png
+![LOO_Epanech](https://github.com/jelupre/ML1/blob/master/images/LOO_Epanech.png
+
+![PW_Q_map](https://github.com/jelupre/ML1/blob/master/images/PW_Q_map.png
+![LOO_Quadratic](https://github.com/jelupre/ML1/blob/master/images/LOO_Quadratic.png
+
+![PW_G_map](https://github.com/jelupre/ML1/blob/master/images/PW_G_map.png
+![LOO_Gauss](https://github.com/jelupre/ML1/blob/master/images/LOO_Gauss.png
+
+
+
+
+
