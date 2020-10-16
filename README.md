@@ -14,10 +14,10 @@
     <td>k = 1</td>
     <td>0.0467</td>
   </tr>
-  <tr><br>
+  <tr><b>
     <td>knn</td>
     <td>k = 6</td>
-    <td>0.0333</td></br>
+    <td>0.0333</td></b>
   </tr>
   <tr>
     <td>kwnn</td>
