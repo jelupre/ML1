@@ -12,7 +12,7 @@
   <tr>
     <td>1nn</td>
     <td>k = 1</td>
-    <td>0.04667</td>
+    <td>0.0467</td>
   </tr>
   <tr>
     <td>knn</td>
@@ -47,7 +47,7 @@
   <tr>
     <td>PW Gauss</td>
     <td>h = 0.1</td>
-    <td>0.032</td>
+    <td>0.04</td>
   </tr>
 </table> 
 
