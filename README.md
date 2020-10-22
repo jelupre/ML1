@@ -581,6 +581,17 @@ potential_function <- function(set, point, h, g) {
 
 Теперь взглянем на результаты работы. Будем отображать карту потенциалов и карту классификации для каждого ядра.
 
+![PFC_R_map.png](https://github.com/jelupre/ML1/blob/master/images/PFC_R_map.png)
+![PFC_map_potential_Rect.png](https://github.com/jelupre/ML1/blob/master/images/PFC_map_potential_Rect.png)
+
+![PFC_T_map.png](https://github.com/jelupre/ML1/blob/master/images/PFC_T_map.png)
+![PFC_map_potential_Triangle.png](https://github.com/jelupre/ML1/blob/master/images/PFC_map_potential_Triangle.png)
+
+![PFC_E_map.png](https://github.com/jelupre/ML1/blob/master/images/PFC_E_map.png)
+![PFC_map_potential_Epanch.png](https://github.com/jelupre/ML1/blob/master/images/PFC_map_potential_Epanch.png)
+
+![PFC_Q_map.png](https://github.com/jelupre/ML1/blob/master/images/PFC_Q_map.png)
+![PFC_map_potential_Quadratic.png](https://github.com/jelupre/ML1/blob/master/images/PFC_map_potential_Quadratic.png)
 
 
 
