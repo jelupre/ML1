@@ -505,3 +505,31 @@ PFC <- function(set, point, pot, h) {
   
 }
 ```
+
+
+```R
+potential_function <- function(set, point, h, g) {
+  
+  weights <- matrix(0, 1, 3)
+  row <- dim(set)[1]
+  class <- c("setosa", "versicolor", "virginica")
+  
+  for (i in 1:row) {
+    
+    if (distance_of_Euclid(set[i, 1:2], point) <= h) {
+      tmp <- K(set[i, 1:2], point, h)
+      if (set[i, 3] == "setosa")      weights[1] <- weights[1] + g * tmp  
+      if (set[i, 3] == "versicolor")  weights[2] <- weights[2] + g * tmp
+      if (set[i, 3] == "virginica")   weights[3] <- weights[3] + g * tmp
+    }
+  }
+  
+  if (weights[1] + weights[2] + weights[3] == 0) {
+    return("white")
+  }
+  else {
+    return(class[which.max(weights)])
+  }
+  
+}
+```
