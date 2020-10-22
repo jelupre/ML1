@@ -479,6 +479,29 @@ LOO_h <- function(arr) {
 ![LOO_Gauss](https://github.com/jelupre/ML1/blob/master/images/LOO_Gauss.png)
 
 
+<h2>Метод потенциальных функций</h2>
 
-
-
+```R
+PFC <- function(set, point, pot, h) {
+  
+  weights <- matrix(0, 1, 3)
+  row <- dim(set)[1]
+  class <- c("setosa", "versicolor", "virginica")
+  
+  for (i in 1:row) {
+    if (distance_of_Euclid(set[i, 1:2], point) <= h) {
+      if (set[i, 3] == "setosa")      weights[1] <- weights[1] + pot[i]  
+      if (set[i, 3] == "versicolor")  weights[2] <- weights[2] + pot[i]
+      if (set[i, 3] == "virginica")   weights[3] <- weights[3] + pot[i]
+    }
+  }
+  
+  if (weights[1] + weights[2] + weights[3] == 0) {
+    return("white")
+  }
+  else {
+    return(class[which.max(weights)])
+  }
+  
+}
+```
