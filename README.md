@@ -49,6 +49,26 @@
     <td>h = 0.1</td>
     <td>0.04</td>
   </tr>
+  <tr>
+    <td>MPF Rect</td>
+    <td>h = 0.4</td>
+    <td>0.04</td>
+  </tr>
+  <tr>
+    <td>MPF Triangle</td>
+    <td>h = 0.4</td>
+    <td>0.04</td>
+  </tr>
+  <tr>
+    <td>MPF Epanech</td>
+    <td>h = 0.4</td>
+    <td>0.04</td>
+  </tr>
+  <tr>
+    <td>MPF Quadratic</td>
+    <td>h = 0.4</td>
+    <td>0.04</td>
+  </tr>
 </table> 
 
 <p>
