@@ -25,22 +25,7 @@
     <td>0.04</td>
   </tr>
   <tr>
-    <td>PW Rect</td>
-    <td>h = 0.4</td>
-    <td>0.04</td>
-  </tr>
-  <tr>
-    <td>PW Triangle</td>
-    <td>h = 0.4</td>
-    <td>0.04</td>
-  </tr>
-  <tr>
-    <td>Pw Epanech</td>
-    <td>h = 0.4</td>
-    <td>0.04</td>
-  </tr>
-  <tr>
-    <td>PW Quadratic</td>
+    <td>PW (all kernels, except Gauss)</td>
     <td>h = 0.4</td>
     <td>0.04</td>
   </tr>
@@ -50,24 +35,9 @@
     <td>0.04</td>
   </tr>
   <tr>
-    <td>MPF Rect</td>
-    <td>h = 0.4</td>
-    <td>0.04</td>
-  </tr>
-  <tr>
-    <td>MPF Triangle</td>
-    <td>h = 0.4</td>
-    <td>0.04</td>
-  </tr>
-  <tr>
-    <td>MPF Epanech</td>
-    <td>h = 0.4</td>
-    <td>0.04</td>
-  </tr>
-  <tr>
-    <td>MPF Quadratic</td>
-    <td>h = 0.4</td>
-    <td>0.04</td>
+    <td>MPF (all kernels, except Gauss)</td>
+    <td>h = 1</td>
+    <td>0.0467</td>
   </tr>
 </table> 
 
