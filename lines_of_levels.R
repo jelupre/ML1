@@ -22,7 +22,7 @@ Sigma[2, 1] <- 0
 x <- seq(-5, 5, 0.1)
 y <- seq(-5, 5, 0.1)
 
-
+par(bg = 'black', fg = 'white')
 plot(-5:5, -5:5, type = "n",asp = 1)
 
 
