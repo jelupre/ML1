@@ -508,92 +508,92 @@ LOO_h <- function(arr) {
 
 Данный алгоритм имеет достаточно богатый набор из 2l параметров. Зафиксируем h = 0.4 и будем использовать те же ядра, что и в методе парзеновского окна, кроме гауссовского.
 
-Рассмотрим функцию, которая находит оптимальный параметр (потенциал).
+Рассмотрим функцию, которая находит потенциалы.
 
 ```R
-find_potential <- function(arr, h) {
+find_potentials <- function(set, h, eps) {
   
-  row <- dim(arr)[1]
+  row <- dim(set)[1]
+  err <- row
+  potentials <- matrix(0, row, 1)
   
-  Pot <- matrix(0, row, 1)
-  eps <- 10
-  max_err <- row
-  
-  while (max_err >= eps) {
+  while (err > eps) {
     
-    max_err <- 0
+    err <- 0
+    j <- 1
     
-    for (i in (1:row)) {
+    while (TRUE) {
       
-      new_arr <- arr
-      new_arr <- new_arr[-i, ]
-      point <- arr[i, 1:2]
+      class <- PF(set, set[j, 1:2], h, potentials)
       
-      class <- potential_function(new_arr, point, h, Pot[i])
-      
-      if (class != arr[i, 3]) {
+      if (set[j, 3] != class) {
         
-        Pot[i] <- Pot[i] + 1
-        max_err <- max_err + 1
+        ##print(j)
+        #print(class)
+        #print(set[j, 3])
+        
+        potentials[j] <- potentials[j] + 1
+        break
         
       }
+      
+      j <- j %% row + 1
+      
     }
-    #print(max_err)
-  }
-  return(Pot)
-}
-```
-Данная функцию подсчитывает потенциалы выборки относительно классифицируемой точки.
-
-```R
-PFC <- function(set, point, pot, h) {
-  
-  weights <- matrix(0, 1, 3)
-  row <- dim(set)[1]
-  class <- c("setosa", "versicolor", "virginica")
-  
-  for (i in 1:row) {
-    if (distance_of_Euclid(set[i, 1:2], point) <= h) {
-      if (set[i, 3] == "setosa")      weights[1] <- weights[1] + pot[i]  
-      if (set[i, 3] == "versicolor")  weights[2] <- weights[2] + pot[i]
-      if (set[i, 3] == "virginica")   weights[3] <- weights[3] + pot[i]
+    
+    for (i in 1:row) {
+      
+      class <- PF(set[-i, ], set[i, 1:2], h, potentials)
+      
+      if (set[i, 3] != class) {
+        
+        err <- err + 1
+        
+      }
+      
     }
+    
+    print(err)
+    #print(potentials)
+    
+    
   }
   
-  if (weights[1] + weights[2] + weights[3] == 0) {
-    return("white")
-  }
-  else {
-    return(class[which.max(weights)])
-  }
+  return(potentials)
   
 }
 ```
 
-Теперь же посмотрим на функцию, которая, собственно, и определяет класс точки.
+Данная функция и есть основа метода потенциальных функций, она возвращает класс точки отностительно обучающей выборки.
 
 ```R
-potential_function <- function(set, point, h, g) {
+PF <- function(set, point, h, potentials){
   
-  weights <- matrix(0, 1, 3)
   row <- dim(set)[1]
-  class <- c("setosa", "versicolor", "virginica")
+  w <- matrix(0, 3, 1)
+  names(w) = c("setosa", "versicolor", "virginica")
   
   for (i in 1:row) {
     
     if (distance_of_Euclid(set[i, 1:2], point) <= h) {
+      
       tmp <- K(set[i, 1:2], point, h)
-      if (set[i, 3] == "setosa")      weights[1] <- weights[1] + g * tmp  
-      if (set[i, 3] == "versicolor")  weights[2] <- weights[2] + g * tmp
-      if (set[i, 3] == "virginica")   weights[3] <- weights[3] + g * tmp
+      
+      w[set[i, 3]] <- w[set[i, 3]] + potentials[i] * tmp
+      
     }
+    
   }
   
-  if (weights[1] + weights[2] + weights[3] == 0) {
-    return("white")
+  if (max(w) == 0) {
+    
+    return("NA")
+    
   }
   else {
-    return(class[which.max(weights)])
+    
+    return(names(which.max(w)))
+    
   }
   
 }
