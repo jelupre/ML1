@@ -578,10 +578,10 @@ PF <- function(set, point, h, potentials){
 ![PFC_map_potential_Triangle.png](https://github.com/jelupre/ML1/blob/master/images/PFC_map_potential_Triangle.png)
 
 ![PFC_E_map.png](https://github.com/jelupre/ML1/blob/master/images/PFC_E_map.png)
-![PFC_map_potential_Epanch.png](https://github.com/jelupre/ML1/blob/master/images/PFC_map_potential_Epanch.png)
+![PFC_map_potential_Epanch.png](https://github.com/jelupre/ML1/blob/master/images/PFC_map_potential_Epanech.png)
 
 ![PFC_Q_map.png](https://github.com/jelupre/ML1/blob/master/images/PFC_Q_map.png)
-![PFC_map_potential_Quartic.png](https://github.com/jelupre/ML1/blob/master/images/PFC_map_potential_Quadratic.png)
+![PFC_map_potential_Quartic.png](https://github.com/jelupre/ML1/blob/master/images/PFC_map_potential_Quartic.png)
 
 
 
