@@ -591,7 +591,7 @@ PF <- function(set, point, h, potentials){
 Рассмотрим многомерное нормальное распределение.
 Вероятностное распределение с плотностью
 
-![Formula_of_Gauss.png](https://github.com/jelupre/ML1/blob/master/images/Formula_of_Gauss.png)
+![Formula_of_Gauss_distribution.png](https://github.com/jelupre/ML1/blob/master/images/Formula_of_Gauss_distribution.png)
 
 называется <b>n-мерным многомерным нормальным (гауссовским) распределением</b> с математическим ожиданием (центром) µ (вектор из n вещественных чисел)  и ковариационной вещественной матрицей Σ размерностью n на n. Предполагается, что матрица Σ симметричная,
 невырожденная, положительно определенная.
