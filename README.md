@@ -602,15 +602,11 @@ PF <- function(set, point, h, potentials){
 
 ![S1.png](https://github.com/jelupre/ML1/blob/master/images/S1.png)
 
-![F1.png](https://github.com/jelupre/ML1/blob/master/images/F1.png)
-
 ![Sigma1.png](https://github.com/jelupre/ML1/blob/master/images/Sigma1.png)
 
 2) Если признаки имеют одинаковые дисперсии, тогда эллипсоиды являются сферами.
 
 ![S2.png](https://github.com/jelupre/ML1/blob/master/images/S2.png)
-
-![F2.png](https://github.com/jelupre/ML1/blob/master/images/F2.png)
 
 ![Sigma2.png](https://github.com/jelupre/ML1/blob/master/images/Sigma2.png)
 
