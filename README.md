@@ -647,7 +647,7 @@ PF <- function(set, point, h, potentials){
 
 <b>Наивный нормальный байесовский классификатор.</b>  Предположим, что все признаки независимы и нормально распределены:
 
-![p](https://github.com/jelupre/ML1/blob/master/images/p.jpg)
+![Gauss_dis](https://github.com/jelupre/ML1/blob/master/images/Gauss_dis.jpg)
 
 Рассмотрим программную реализацию:
 
