@@ -85,3 +85,22 @@ legend(
   col = c("red", "green4", "blue"),
   legend = c("setosa", "versicolor", "virginica")
 )
+
+
+
+Q <- 0
+
+for (i in 1:row) {
+  
+  class <- naive_Bayes(Py, n, m, mu, sigma, set[i, 1:2])
+  
+  if (class != set[i, 3]) {
+    
+    Q <- Q + 1
+    
+  }
+}
+
+Q <- Q / row
+
+print(Q)
