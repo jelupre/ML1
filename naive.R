@@ -1,10 +1,10 @@
-naive_Bayes <- function(Py, n, m, mu, sigma, point){
+naive_Bayes <- function(Py, lambda, n, m, mu, sigma, point){
   
   p <- rep(0, m)
   
   for (i in 1:m) {
     
-    p[i] <- Py[i]
+    p[i] <- Py[i] * lambda[i]
     
     for (j in 1:n) {
       
@@ -42,7 +42,6 @@ for (i in 1:m) {
 mu <- matrix(0, m, n)
 sigma <- matrix(0, m, n)
 
-
 for (i in 1:m) {
   
   for (j in 1:n) {
@@ -56,6 +55,8 @@ for (i in 1:m) {
   
 }
 
+
+lambda <- c(1, 1, 1)
 
 
 plot(
@@ -72,7 +73,7 @@ for (i in seq(0.8, 7.2, 0.1)) {
   
   for (j in seq(-0.3, 2.9, 0.1)) {
     
-    points(i, j, pch = 1, col = colors[naive_Bayes(Py, n, m, mu, sigma, c(i, j))])
+    points(i, j, pch = 1, col = colors[naive_Bayes(Py, lambda, n, m, mu, sigma, c(i, j))])
     
   }
   
@@ -87,12 +88,11 @@ legend(
 )
 
 
-
 Q <- 0
 
 for (i in 1:row) {
   
-  class <- naive_Bayes(Py, n, m, mu, sigma, set[i, 1:2])
+  class <- naive_Bayes(Py, lambda, n, m, mu, sigma, set[i, 1:2])
   
   if (class != set[i, 3]) {
     
