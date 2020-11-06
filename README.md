@@ -673,6 +673,10 @@ PF <- function(set, point, h, potentials){
 
 ![Sigma3.png](https://github.com/jelupre/ML1/blob/master/images/Sigma3.png)
 
+Рассмотрим общую формулу:
+
+![Eq.png](https://github.com/jelupre/ML1/blob/master/images/Eq.png)
+
 [Оглавление](#Оглавление)
 
 ### Наивный нормальный байесовский классификатор
