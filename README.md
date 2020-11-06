@@ -732,6 +732,8 @@ naive_Bayes <- function(Py, lambda, n, m, mu, sigma, point){
   
 }
 
+# инициализация
+
 set <- iris[ , 3:5]
 
 row <- dim(set)[1]
@@ -752,6 +754,8 @@ for (i in 1:m) {
   Py[i] <- num_classes[i] / row
 }
 
+lambda <- c(1, 1, 1)
+
 # матожидание и дисперсия
 mu <- matrix(0, m, n)
 sigma <- matrix(0, m, n)
@@ -768,38 +772,6 @@ for (i in 1:m) {
   }
   
 }
-
-
-lambda <- c(1, 1, 1)
-
-
-plot(
-    set[ , 1], set[ , 2], 
-    pch = 21, bg = colors[set[, 3]], col = colors[set[, 3]],
-    xlab = "Длина лепестка", ylab = "Ширина лепестка",
-    main = "Карта классификации (Наивный нормальный Байесовский классификатор)",
-    xlim = c(1, 7), ylim = c(0, 2.5)
-)
-
-
-# карта классификации
-for (i in seq(0.8, 7.2, 0.1)) {
-  
-  for (j in seq(-0.3, 2.9, 0.1)) {
-    
-    points(i, j, pch = 1, col = colors[naive_Bayes(Py, lambda, n, m, mu, sigma, c(i, j))])
-    
-  }
-  
-}
-
-
-legend(
-  "bottomright",
-  pch = c(21, 21, 21),
-  col = c("red", "green4", "blue"),
-  legend = c("setosa", "versicolor", "virginica")
-)
 ```
 
 Посмотрим на карту классификации данного классификатора на примере ирисов Фишера.
