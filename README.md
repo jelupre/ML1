@@ -708,13 +708,13 @@ PF <- function(set, point, h, potentials){
 Рассмотрим программную реализацию:
 
 ```R
-naive_Bayes <- function(Py, n, m, mu, sigma, point){
+naive_Bayes <- function(Py, lambda, n, m, mu, sigma, point){
   
   p <- rep(0, m)
   
   for (i in 1:m) {
     
-    p[i] <- Py[i]
+    p[i] <- Py[i] * lambda[i]
     
     for (j in 1:n) {
       
@@ -752,7 +752,6 @@ for (i in 1:m) {
 mu <- matrix(0, m, n)
 sigma <- matrix(0, m, n)
 
-
 for (i in 1:m) {
   
   for (j in 1:n) {
@@ -766,6 +765,8 @@ for (i in 1:m) {
   
 }
 
+
+lambda <- c(1, 1, 1)
 
 
 plot(
@@ -782,11 +783,12 @@ for (i in seq(0.8, 7.2, 0.1)) {
   
   for (j in seq(-0.3, 2.9, 0.1)) {
     
-    points(i, j, pch = 1, col = colors[naive_Bayes(Py, n, m, mu, sigma, c(i, j))])
+    points(i, j, pch = 1, col = colors[naive_Bayes(Py, lambda, n, m, mu, sigma, c(i, j))])
     
   }
   
 }
+
 
 legend(
   "bottomright",
@@ -799,5 +801,23 @@ legend(
 Посмотрим на карту классификации данного классификатора на примере ирисов Фишера.
 
 ![naive_norm_Bayes_map](https://github.com/jelupre/ML1/blob/master/images/naive_norm_Bayes_map.png)
+
+Попробуем варьировать "лямбды":
+
+1) Увеличим лямбду для setosa
+
+![naive_norm_Bayes_map_setosa](https://github.com/jelupre/ML1/blob/master/images/naive_norm_Bayes_map_setosa.png)
+
+2) Теперь сделаем максимальной лямбду для versicolor
+
+![naive_norm_Bayes_map_versicolor](https://github.com/jelupre/ML1/blob/master/images/naive_norm_Bayes_map_versicolor.png)
+
+3) "Выровняем" лямбды для versicolor и virginica, а для setosa установим меньше, чем у других
+
+![naive_norm_Bayes_map_versicolor_and_virginica](https://github.com/jelupre/ML1/blob/master/images/naive_norm_Bayes_map_versicolor_and_virginica.png)
+
+4) И на последок, увеличим лямбду для virginica
+
+![naive_norm_Bayes_map_virginica](https://github.com/jelupre/ML1/blob/master/images/naive_norm_Bayes_map_virginica.png)
 
 [Оглавление](#Оглавление)
