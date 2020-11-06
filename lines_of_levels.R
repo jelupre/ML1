@@ -30,7 +30,7 @@ for (i in x) {
   
   for (j in y) {
     
-    color <- adjustcolor("white", Gauss_distribution(Sigma, mu, c(i, j)))
+    color <- adjustcolor("green", Gauss_distribution(Sigma, mu, c(i, j)) * 2)
     points(i, j, pch = 21,col = color, bg = color)
     
   }
