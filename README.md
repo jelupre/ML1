@@ -797,3 +797,71 @@ for (i in 1:m) {
 ![naive_norm_Bayes_map_virginica](https://github.com/jelupre/ML1/blob/master/images/naive_norm_Bayes_map_virginica.png)
 
 [Оглавление](#Оглавление)
+
+### Подстановочный алгоритм
+
+[Оглавление](#Оглавление)
+
+Оценим параметры функций правдоподобия по частям обучающей выборки для каждого класса.
+
+![mu_and_sigma_for_plugin](https://github.com/jelupre/ML1/blob/master/images/mu_and_sigma_for_plugin.png)
+
+Затем эти выборочные оценки подставим в оптимальный байесовский классификатор. Получим байесовский
+нормальный классификатор, который называется также <i>подстановочным (plug-in)</i>.
+
+При длине выборки, стремящейся к бесконечности, оценки обладают рядом оптимальных
+свойств: они <b>не смещены, состоятельны и эффективны</b>. Однако оценки,
+сделанные по коротким выборкам, могут быть не достаточно точными.
+
+Рассмотрим программную реализацию для ирисов Фишера. Здесь и далее будем считать классы равнозначными.
+
+```R
+plugin <- function(Py, lambda, n, m, mu, sigma, point) {
+  
+  point <- as.numeric(point)
+  p <- rep(0, m)
+  for (i in 1:m) {
+    
+    p[i] <- Py[i] * lambda[i]
+    S <- matrix(0, n, n)
+    for (i1 in 1:n) {
+      for (i2 in 1:n) {
+        
+        S[i1, i2] <- sigma[i1, i2 + (i - 1) * n]
+        
+      }
+    }
+    
+    p[i] <- p[i] *  exp(-(1/2) * t(point - mu[i, ]) %*% solve(S) %*% (point - mu[i, ])) / sqrt((2 * pi)^n * det(S))
+    
+  }
+  
+  return(classes[which.max(p)])
+}
+```
+
+Взглянем на карту классификации данного алгоритма на "ирисах".
+
+![plugin_map](https://github.com/jelupre/ML1/blob/master/images/plugin_map.png)
+
+Теперь давайте посмотрим на разделяющие кривые.
+
+![separating_curves](https://github.com/jelupre/ML1/blob/master/images/separating_curves.png)
+
+Подробнее остановимся на разделяющих кривых.
+
+1) Эллипс
+
+![separating_curves_ellipse](https://github.com/jelupre/ML1/blob/master/images/separating_curves_ellipse.png)
+
+2) Парабола
+
+![separating_curves_parabola](https://github.com/jelupre/ML1/blob/master/images/separating_curves_parabola.png)
+
+3) Гипербола
+
+![separating_curves_hyperbola](https://github.com/jelupre/ML1/blob/master/images/separating_curves_hyperbola.png)
+
+
+
+[Оглавление](#Оглавление)
