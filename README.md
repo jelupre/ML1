@@ -861,7 +861,7 @@ plugin <- function(Py, lambda, n, m, mu, sigma, point) {
 
 3) Гипербола
 
-![separating_curves_hyperbola](https://github.com/jelupre/ML1/blob/master/images/separating_curves_hyperbola.png)
+![separating_curves_hyperbole](https://github.com/jelupre/ML1/blob/master/images/separating_curves_hyperbole.png)
 
 
 
