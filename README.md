@@ -898,6 +898,46 @@ LDF <- function(Py, lambda, n, m, mu, sigma, point) {
   
   return(classes[which.max(p)])
 }
+
+
+# матожидание и дисперсия
+mu <- matrix(0, m, n)
+sigma <- matrix(0, n, n)
+
+# вычисление матожидания 
+for (i in 1:m) {
+  for (j in 1:n) {
+    mu[i, j] <- mean(set[set[, n + 1] == classes[i], ][ , j])
+  }
+}
+
+temp <- rep(0, n)
+
+# вычисление дисперсии
+subset <- set[set[, n + 1] == classes[1], ][ , ]
+l <- dim(subset)[1]
+
+for (j in 1:l){
+
+  for (i in 1:n) {
+    temp[i] <- subset[j, i] - mu[1, i] 
+  }
+  
+  S <- temp %*% t(temp)
+  
+  for (i1 in 1:n) {
+    for (i2 in 1:n) {
+      sigma[i1, i2] <- sigma[i1, i2] + S[i1, i2]
+    }
+  }
+  
+}
+
+for (i1 in 1:n) {
+  for (i2 in 1:n) {
+    sigma[i1, i2] <- sigma[i1, i2] / (row - l)
+  }
+}
 ```
 
 Теперь посмотрим, как выглядит карта классификации и разделяющие линии классов.
