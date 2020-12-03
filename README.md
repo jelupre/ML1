@@ -1032,4 +1032,32 @@ for (i1 in 1:n) {
 
 ![Change_w_for_ADALINE](https://github.com/jelupre/ML1/blob/master/images/Change_w_for_ADALINE.png)
 
+```R
+# функция потерь ADALINE
+L <- function(M) {
+  return((M - 1)^2)
+}
+
+# выбор случайного объекта
+i <- round(runif(1, 1, 100))
+xi <- as.numeric(Xl[i, 1:n])
+yi <- as.numeric(Xl[i, n + 1])
+
+# ошибка
+eps <- L(crossprod(w, xi) * yi)
+
+# шаг градиентного спуска
+eta <- as.numeric(1 / (sqrt(abs(xi[1])^2 + abs(xi[2])^2 + abs(xi[3])^2)))
+w[1] <- w[1] - crossprod(w, xi) * yi * eta
+w[2] <- w[2] - crossprod(w, xi) * yi * eta
+w[3] <- w[3] - crossprod(w, xi) * yi * eta
+
+# пересчёт Q
+Q <- (1 - lambda) * Q + lambda * eps
+```
+
+![ADALINE](https://github.com/jelupre/ML1/blob/master/images/ADALINE.png)
+
+![ADALINE_map](https://github.com/jelupre/ML1/blob/master/images/ADALINE_map.png)
+
 [Оглавление](#Оглавление)
