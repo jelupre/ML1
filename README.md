@@ -999,13 +999,11 @@ for (i1 in 1:n) {
   <li>Повторять, пока Q и/или w не стабилизируется
     <ol>
         <li>Выбираем случайный объект</li>
-        <li>Вычислить ошибку алгоритма: 
-            ![Eps](https://github.com/jelupre/ML1/blob/master/images/Eps.png)
-        </li>
+        <li>Вычислить ошибку алгоритма:</li>
+        ![Eps](https://github.com/jelupre/ML1/blob/master/images/Eps.png)
         <li>Объявляем вектор весов w</li>
-        <li>Оценить новое значение функционала
-            ![Change_Q](https://github.com/jelupre/ML1/blob/master/images/Change_Q.png)
-        </li>
+        <li>Оценить новое значение функционала</li>
+        ![Change_Q](https://github.com/jelupre/ML1/blob/master/images/Change_Q.png)
     </ol>
   </li>
     
