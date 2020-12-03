@@ -991,19 +991,23 @@ for (i1 in 1:n) {
 
 Критерием останова может быть стабилизация Q и/или w.
 
+Функционал изменяется по формуле:
+
+![Change_Q](https://github.com/jelupre/ML1/blob/master/images/Change_Q.png), где
+
+![Eps](https://github.com/jelupre/ML1/blob/master/images/Eps.png)
+
 <h4>Алгоритм</h4>
 
 <ol>
-  <li>Инициализировать веса</li>
-  <li>Инициализировать текущую оценку функционала</li>
-  <li>Повторять, пока Q и/или w не стабилизируется
+  <li>Инициализируем веса</li>
+  <li>Инициализируем текущую оценку функционала</li>
+  <li>Повторяем, пока Q и/или w не стабилизируется
     <ol>
         <li>Выбираем случайный объект</li>
         <li>Вычислить ошибку алгоритма:</li>
-        ![Eps](https://github.com/jelupre/ML1/blob/master/images/Eps.png)
         <li>Объявляем вектор весов w</li>
         <li>Оценить новое значение функционала</li>
-        ![Change_Q](https://github.com/jelupre/ML1/blob/master/images/Change_Q.png)
     </ol>
   </li>
     
