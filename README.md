@@ -997,7 +997,9 @@ for (i1 in 1:n) {
 
 ![Eps](https://github.com/jelupre/ML1/blob/master/images/Eps.png)
 
-Темп обучения - ![Eta](https://github.com/jelupre/ML1/blob/master/images/Eta.png)
+Темп обучения вычисляется по формуле
+
+![Eta](https://github.com/jelupre/ML1/blob/master/images/Eta.png)
 
 <h3>Алгоритм</h3>
 
@@ -1024,7 +1026,7 @@ for (i1 in 1:n) {
 
 ![Loss_function_for_ADALINE](https://github.com/jelupre/ML1/blob/master/images/Loss_function_for_ADALINE.png)
 
-![Loss_function_for_ADALINE](https://github.com/jelupre/ML1/blob/master/images/Loss_function_for_ADALINE.png)
+![Derivative_of_loss_function_for_ADALINE](https://github.com/jelupre/ML1/blob/master/images/Derivative_of_loss_function_for_ADALINE.png)
 
 Получаем правило обновления весов на каждой итерации метода стохастического градиента.
 
