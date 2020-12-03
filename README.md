@@ -997,7 +997,9 @@ for (i1 in 1:n) {
 
 ![Eps](https://github.com/jelupre/ML1/blob/master/images/Eps.png)
 
-<h4>Алгоритм</h4>
+Темп обучения - ![Eta](https://github.com/jelupre/ML1/blob/master/images/Eta.png)
+
+<h3>Алгоритм</h3>
 
 <ol>
   <li>Инициализируем веса</li>
@@ -1010,8 +1012,22 @@ for (i1 in 1:n) {
         <li>Оценить новое значение функционала</li>
     </ol>
   </li>
-    
 </ol>
 
 [Оглавление](#Оглавление)
 
+### Адаптивный линейный элемент
+
+[Оглавление](#Оглавление)
+
+Возьмём функцию потерь:
+
+![Loss_function_for_ADALINE](https://github.com/jelupre/ML1/blob/master/images/Loss_function_for_ADALINE.png)
+
+![Loss_function_for_ADALINE](https://github.com/jelupre/ML1/blob/master/images/Loss_function_for_ADALINE.png)
+
+Получаем правило обновления весов на каждой итерации метода стохастического градиента.
+
+![Change_w_for_ADALINE](https://github.com/jelupre/ML1/blob/master/images/Change_w_for_ADALINE.png)
+
+[Оглавление](#Оглавление)
