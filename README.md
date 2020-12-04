@@ -1159,8 +1159,8 @@ w[2] <- w[2] + xi[2] * yi * eta * SigmoidFunction(crossprod(w, xi)*(-yi))
 w[3] <- w[3] + xi[3] * yi * eta * SigmoidFunction(crossprod(w, xi)*(-yi))
 ```
 
-![Logis_regress](https://github.com/jelupre/ML1/blob/master/images/Logis_regress.png)
+![Logis_regression](https://github.com/jelupre/ML1/blob/master/images/Logis_regression.png)
 
-![Logis_regress_map](https://github.com/jelupre/ML1/blob/master/images/Logis_regress_map.png)
+![Logis_regression_map](https://github.com/jelupre/ML1/blob/master/images/Logis_regression_map.png)
 
 [Оглавление](#Оглавление)
