@@ -1127,7 +1127,7 @@ w[3] <- w[3] + xi[3] * yi * eta
 
 1. Байесовский классификатор является линейным:
 
-![Bayes_liniar](https://github.com/jelupre/ML1/blob/master/images/Bayes_liniar.png)
+![Bayes_linear](https://github.com/jelupre/ML1/blob/master/images/Bayes_linear.png)
 
 2. Апостериорная вероятность принадлежности произвольного объекта классу может быть вычислена по значению дискриминантной функции:
 
