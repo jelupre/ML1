@@ -1123,7 +1123,7 @@ w[3] <- w[3] + xi[3] * yi * eta
 
 Рассмотрим оптимальный байесовский классификатор для двух классов {−1; +1}:
 
-![Optimal_bayes_for_logic_regress](https://github.com/jelupre/ML1/blob/master/images/Optimal_bayes_for_logic_regress.png)
+![Optimal_bayes_for_logis_regress](https://github.com/jelupre/ML1/blob/master/images/Optimal_bayes_for_logis_regress.png)
 
 1. Байесовский классификатор является линейным:
 
