@@ -1062,8 +1062,6 @@ Q <- (1 - lambda) * Q + lambda * eps
 
 ![ADALINE](https://github.com/jelupre/ML1/blob/master/images/ADALINE.png)
 
-![ADALINE_map](https://github.com/jelupre/ML1/blob/master/images/ADALINE_map.png)
-
 [Оглавление](#Оглавление)
 
 ### Персептрон Розенблатта
@@ -1104,8 +1102,6 @@ w[3] <- w[3] + xi[3] * yi * eta
 ```
 
 ![Perceptron](https://github.com/jelupre/ML1/blob/master/images/Perceptron.png)
-
-![Perceptron_map](https://github.com/jelupre/ML1/blob/master/images/Perceptron_map.png)
 
 [Оглавление](#Оглавление)
 
@@ -1161,8 +1157,6 @@ w[3] <- w[3] + xi[3] * yi * eta * SigmoidFunction(crossprod(w, xi)*(-yi))
 ```
 
 ![Logis_regression](https://github.com/jelupre/ML1/blob/master/images/Logis_regression.png)
-
-![Logis_regression_map](https://github.com/jelupre/ML1/blob/master/images/Logis_regression_map.png)
 
 [Оглавление](#Оглавление)
 
