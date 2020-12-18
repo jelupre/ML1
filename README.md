@@ -1066,6 +1066,12 @@ Q <- (1 - lambda) * Q + lambda * eps
 
 ![ADALINE_Q](https://github.com/jelupre/ML1/blob/master/images/ADALINE_Q.png)
 
+Линейно-неразделимая выборка:
+
+![ADALINE_2](https://github.com/jelupre/ML1/blob/master/images/ADALINE_2.png)
+
+![ADALINE_Q_2](https://github.com/jelupre/ML1/blob/master/images/ADALINE_Q_2.png)
+
 [Оглавление](#Оглавление)
 
 ### Персептрон Розенблатта
@@ -1110,6 +1116,12 @@ w[3] <- w[3] + xi[3] * yi * eta
 ![Perceptron](https://github.com/jelupre/ML1/blob/master/images/Perceptron.png)
 
 ![Perceptron_Q](https://github.com/jelupre/ML1/blob/master/images/Perceptron_Q.png)
+
+Линейно-неразделимая выборка:
+
+![Perceptron_2](https://github.com/jelupre/ML1/blob/master/images/Perceptron_2.png)
+
+![Perceptron_Q_2](https://github.com/jelupre/ML1/blob/master/images/Perceptron_Q_2.png)
 
 [Оглавление](#Оглавление)
 
@@ -1170,6 +1182,12 @@ w[3] <- w[3] + xi[3] * yi * eta * SigmoidFunction(crossprod(w, xi)*(-yi))
 
 ![Logis_regression_Q](https://github.com/jelupre/ML1/blob/master/images/Logis_regression_Q.png)
 
+Линейно-неразделимая выборка:
+
+![Logis_regression_2](https://github.com/jelupre/ML1/blob/master/images/Logis_regression_2.png)
+
+![Logis_regression_Q_2](https://github.com/jelupre/ML1/blob/master/images/Logis_regression_Q_2.png)
+
 [Оглавление](#Оглавление)
 
 ### Сравнение алгоритмов
@@ -1188,7 +1206,13 @@ w[3] <- w[3] + xi[3] * yi * eta * SigmoidFunction(crossprod(w, xi)*(-yi))
 
 Посмотрим, как три метода показывают себя на одной и той же выборке.
 
+Линейно-разделимая выборка:
+
 ![Compare](https://github.com/jelupre/ML1/blob/master/images/Compare.png)
+
+Линейно-неразделимая выборка:
+
+![Compare_2](https://github.com/jelupre/ML1/blob/master/images/Compare_2.png)
 
 [Оглавление](#Оглавление)
 
