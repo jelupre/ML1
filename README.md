@@ -1060,6 +1060,8 @@ w[3] <- w[3] - crossprod(w, xi) * yi * eta
 Q <- (1 - lambda) * Q + lambda * eps
 ```
 
+Линейно-разделимая выборка:
+
 ![ADALINE](https://github.com/jelupre/ML1/blob/master/images/ADALINE.png)
 
 ![ADALINE_Q](https://github.com/jelupre/ML1/blob/master/images/ADALINE_Q.png)
@@ -1102,6 +1104,8 @@ w[1] <- w[1] + xi[1] * yi * eta
 w[2] <- w[2] + xi[2] * yi * eta
 w[3] <- w[3] + xi[3] * yi * eta
 ```
+
+Линейно-разделимая выборка:
 
 ![Perceptron](https://github.com/jelupre/ML1/blob/master/images/Perceptron.png)
 
@@ -1159,6 +1163,8 @@ w[1] <- w[1] + xi[1] * yi * eta * SigmoidFunction(crossprod(w, xi)*(-yi))
 w[2] <- w[2] + xi[2] * yi * eta * SigmoidFunction(crossprod(w, xi)*(-yi))
 w[3] <- w[3] + xi[3] * yi * eta * SigmoidFunction(crossprod(w, xi)*(-yi))
 ```
+
+Линейно-разделимая выборка:
 
 ![Logis_regression](https://github.com/jelupre/ML1/blob/master/images/Logis_regression.png)
 
