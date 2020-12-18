@@ -1179,3 +1179,11 @@ w[3] <- w[3] + xi[3] * yi * eta * SigmoidFunction(crossprod(w, xi)*(-yi))
 ![Compare](https://github.com/jelupre/ML1/blob/master/images/Compare.png)
 
 [Оглавление](#Оглавление)
+
+### Метод опорных векторов (SVM)
+
+[Оглавление](#Оглавление)
+
+
+
+[Оглавление](#Оглавление)
