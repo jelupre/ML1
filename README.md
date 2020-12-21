@@ -1319,4 +1319,54 @@ w[3] <- w[3] + xi[3] * yi * eta * SigmoidFunction(crossprod(w, xi)*(-yi))
 объекты–нарушители. Это говорит о <b>недостаточной робастности (устойчивости к шуму)</b> SVM. Нарушителями могут быть объекты, появившиеся в
 результате ошибочных наблюдений; их надо было бы исключить из выборки, а не строить по ним решение.
 
+<b>Кривая ошибок</b> или <b>ROC-кривая</b> – графичекая характеристика качества бинарного классификатора, зависимость доли верных 
+положительных классификаций от доли ложных положительных классификаций при варьировании порога решающего правила. ROC-кривая наглядно 
+представляет, каким будет качество классификации при различных w0 и фиксированном w.
+
+Пусть задана выборка объектов с соответствующими им верными ответами. Тогда для классификатора a(x) можно определить две характеристики качества:
+
+1. Доля ложных положительных классификаций (<b>False Positive Rate, FPR</b>):
+
+![FPR](https://github.com/jelupre/ML1/blob/master/images/FPR.png)
+
+2. Доля верных положительных классификаций (<b>True Positive Rate, TPR</b>):
+
+![TPR](https://github.com/jelupre/ML1/blob/master/images/TPR.png)
+
+ROC-кривая показывает зависимость TPR от FPR при варьировании порога w0. Она проходит из точки (0,0), соответствующей максимальному 
+значению w0, в точку (1,1), соответствующую минимальному значению w0. ROC-кривая монотонно не убывает. Чем выше лежит кривая, тем лучше качество классификации.
+
+Площадь под ROC-кривой AUC (Area Under Curve) является агрегированной характеристикой качества классификации, 
+не зависящей от соотношения цен ошибок. Чем больше значение AUC, тем «лучше» модель классификации. Данный показатель 
+часто используется для сравнительного анализа нескольких моделей классификации.
+
+В алгоритме будем использовать полиномиальное ядро и будем варьировать "штраф за ошибку" (С).
+Посмотрим, что показывает SVM на линейной-разделимой выборке.
+
+![SVM_Linear_1](https://github.com/jelupre/ML1/blob/master/images/SVM_Linear_1.png)
+
+![ROC_Linear_1](https://github.com/jelupre/ML1/blob/master/images/ROC_Linear_1.png)
+
+![SVM_Linear_10](https://github.com/jelupre/ML1/blob/master/images/SVM_Linear_10.png)
+
+![ROC_Linear_10](https://github.com/jelupre/ML1/blob/master/images/ROC_Linear_10.png)
+
+![SVM_Linear_100](https://github.com/jelupre/ML1/blob/master/images/SVM_Linear_100.png)
+
+![ROC_Linear_100](https://github.com/jelupre/ML1/blob/master/images/ROC_Linear_100.png)
+
+Обратимся к линейно-неразделимой выборке.
+
+![SVM_Nonlinear_1](https://github.com/jelupre/ML1/blob/master/images/SVM_Nonlinear_1.png)
+
+![ROC_Nonlinear_1](https://github.com/jelupre/ML1/blob/master/images/ROC_Nonlinear_1.png)
+
+![SVM_Nonlinear_10](https://github.com/jelupre/ML1/blob/master/images/SVM_Nonlinear_10.png)
+
+![ROC_Nonlinear_10](https://github.com/jelupre/ML1/blob/master/images/ROC_Nonlinear_10.png)
+
+![SVM_Nonlinear_100](https://github.com/jelupre/ML1/blob/master/images/SVM_Nonlinear_100.png)
+
+![ROC_Nonlinear_100](https://github.com/jelupre/ML1/blob/master/images/ROC_Nonlinear_100.png)
+
 [Оглавление](#Оглавление)
