@@ -1343,17 +1343,9 @@ ROC-кривая показывает зависимость TPR от FPR при
 В алгоритме будем использовать полиномиальное ядро и будем варьировать "штраф за ошибку" (С).
 Посмотрим, что показывает SVM на линейной-разделимой выборке.
 
-![SVM_Linear_1](https://github.com/jelupre/ML1/blob/master/images/SVM_Linear_1.png)
+![SVM_Linear](https://github.com/jelupre/ML1/blob/master/images/SVM_Linear.png)
 
-![ROC_Linear_1](https://github.com/jelupre/ML1/blob/master/images/ROC_Linear_1.png)
-
-![SVM_Linear_10](https://github.com/jelupre/ML1/blob/master/images/SVM_Linear_10.png)
-
-![ROC_Linear_10](https://github.com/jelupre/ML1/blob/master/images/ROC_Linear_10.png)
-
-![SVM_Linear_100](https://github.com/jelupre/ML1/blob/master/images/SVM_Linear_100.png)
-
-![ROC_Linear_100](https://github.com/jelupre/ML1/blob/master/images/ROC_Linear_100.png)
+![ROC_Linear](https://github.com/jelupre/ML1/blob/master/images/ROC_Linear.png)
 
 Обратимся к линейно-неразделимой выборке.
 
